@@ -5,3 +5,6 @@ public class HelloWorld {
             System.out.println("Hello world!");
         }
 }
+/*
+а где задание с выводом имени? :)
+ */
