@@ -1,4 +1,4 @@
-package Homework3;
+package com.Homework3;
 
 public class Task1 {
 

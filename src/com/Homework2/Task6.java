@@ -1,4 +1,4 @@
-package Homework2;
+package com.Homework2;
 
 import java.util.Scanner;
 
@@ -7,11 +7,15 @@ public class Task6 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите значение a:");
         double a = sc.nextDouble();
+        while (a==0) {
+            System.out.println("Делить на 0 нельзя! Введите значение а:");
+             a = sc.nextDouble();}
         System.out.println("Введите значение b:");
         double b = sc.nextDouble();
         System.out.println("Введите значение c:");
         double c = sc.nextDouble();
         double D;
+
         D = b * b - 4 * a * c;
         if (D > 0) {
             double x1, x2;
@@ -22,7 +26,8 @@ public class Task6 {
             double x;
             x = -b / (2 * a);
             System.out.println("Корень уравнения: x = " + x);
-        } else {
+    }
+        else {
             System.out.println("В данном уравнении корни отсутствуют");
         }
     }

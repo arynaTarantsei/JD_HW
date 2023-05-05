@@ -1,4 +1,4 @@
-package Homework2;
+package com.Homework2;
 
 import java.math.BigInteger;
 import java.util.Scanner;
