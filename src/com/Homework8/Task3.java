@@ -6,7 +6,8 @@ public class Task3 {
         String text = Constants.TEXT_BLOCK;
         String processedText = TextProcessor.replaceCharsInWords(text);
         System.out.println(processedText);
-
+        System.out.println("Слова начинающиеся на согласную, а заканчивающиеся на гласную: ");
+        TextProcessor.printWordsStartingWithConsonantAndEndingWithVowel(text);
     }
 
     public static class TextProcessor {
@@ -35,5 +36,30 @@ public class Task3 {
             return builder.toString();
         }
 
+        public static void printWordsStartingWithConsonantAndEndingWithVowel(String input) {
+            StringBuilder builder = new StringBuilder();
+            String[] words = input.split("\\s+");
+            for (String word : words) {
+                if (word.matches("^[a-zA-Z]+") && (word.length() >= 2)) {
+                    char firstChar = Character.toLowerCase(word.charAt(0));
+                    char lastChar = Character.toLowerCase(word.charAt(word.length() - 1));
+                    if (isConsonant(firstChar) && isVowel(lastChar)) {
+                        builder.append(word).append(" ");
+                    }
+                }
+            }
+            System.out.println(builder);
+        }
+
+
+
+
+        private static boolean isConsonant(char c) {
+            return "bcdfghjklmnpqrstvwxyz".indexOf(c) != -1;
+        }
+
+        private static boolean isVowel(char c) {
+            return "aeiou".indexOf(c) != -1;
+        }
     }
 }
