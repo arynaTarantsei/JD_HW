@@ -1,5 +1,7 @@
 package com.Homework8;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.Scanner;
 
 public class Task5 {
@@ -9,19 +11,18 @@ public class Task5 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите строку: ");
         String input = scanner.nextLine();
+        System.out.println("Найденные номера телефонов: ");
         findAndPrintPhoneNumbers(input);
     }
 
     public static void findAndPrintPhoneNumbers(String input) {
-        String[] words = input.split("\\s+");
-        for (String word : words) {
-            if (word.startsWith("+") && word.length() >= 10 && word.length() <= 15) {
-                String numbers = word.substring(1);
-                if (numbers.matches("\\d+")) {
-                    System.out.println(word);
-                }
-            }
+        Pattern pattern = Pattern.compile("\\+(\\d{9,14})");
+        Matcher matcher = pattern.matcher(input);
+        while (matcher.find()) {
+            System.out.println(matcher.group());
         }
     }
 }
+
+
 
