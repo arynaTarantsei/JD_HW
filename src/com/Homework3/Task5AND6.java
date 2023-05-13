@@ -1,8 +1,8 @@
 package com.Homework3;
 
-import static com.Homework3.Task4a_b.readArray;
+import static com.Homework3.Task4aANDb.readArray;
 
-public class Task5_6 {
+public class Task5AND6 {
 
 
     /**

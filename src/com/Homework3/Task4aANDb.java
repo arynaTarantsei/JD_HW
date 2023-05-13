@@ -3,7 +3,7 @@ package com.Homework3;
 import java.util.Scanner;
 
 
-public class Task4a_b {
+public class Task4aANDb {
     public static void main(String[] args) {
         int[] ints = readArray();
         printArray(ints);
