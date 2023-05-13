@@ -1,27 +1,49 @@
 package com.Homework3;
-
+import java.util.Scanner;
 
 public class Task7 {
-    public static void main(String[] args) {
-        int[][] arr = new int[7][4];
-        int indMaxPr = 0;
-        int maxPr = -1;
-        int p;
-        for (int i = 0; i < arr.length; i++) {
-            p = 0;
-            for (int j = 0; j < arr[i].length; j++) {
-                arr[i][j] = (int) (Math.random() * (5 - (-5) + 1) - 5);
-                System.out.print(arr[i][j] + " ");
-                p=p+arr[i][j];
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Введите количество строк: ");
+            int n = scanner.nextInt();
+
+            System.out.print("Введите количество столбцов: ");
+            int m = scanner.nextInt();
+
+            int[][] matrix = new int[n][m];
+
+            System.out.println("Введите элементы матрицы:");
+
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < m; j++) {
+                    matrix[i][j] = scanner.nextInt();
+                }
             }
-            System.out.println();
-            p = Math.abs(p);
-            System.out.println("Сумма " + p);
-            if (p > maxPr) {
-                maxPr = p;
-                indMaxPr = i;
-            }
+
+            int maxSumRowIndex = getMaxSumRowIndex(matrix);
+
+            System.out.println("Индекс строки с максимальной суммой элементов: " + maxSumRowIndex);
         }
-        System.out.println("Индекс строки с максимальной суммой элементов: " + indMaxPr);
+
+        public static int getMaxSumRowIndex(int[][] matrix) {
+            int maxSumRowIndex = 0;
+            int maxSum = Integer.MIN_VALUE;
+
+            for (int i = 0; i < matrix.length; i++) {
+                int sum = 0;
+
+                for (int j = 0; j < matrix[i].length; j++) {
+                    sum += matrix[i][j];
+                }
+
+                if (sum > maxSum) {
+                    maxSum = sum;
+                    maxSumRowIndex = i;
+                }
+            }
+
+            return maxSumRowIndex;
+        }
     }
-}

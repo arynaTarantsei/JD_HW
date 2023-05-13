@@ -1,17 +1,19 @@
 package com.Homework3;
 
-import static com.Homework3.Task4a_b.readArray;
+import static com.Homework3.Task4aANDb.readArray;
+
 import java.util.Scanner;
+
 public class Task8 {
 
 
-        public static void main(String[] args) {
-            int[] vector = readArray();
-            int[][] matrix = readArrayFromKeyboard();
+    public static void main(String[] args) {
+        int[] vector = readArray();
+        int[][] matrix = readArrayFromKeyboard();
 
 
-            multiply(matrix, vector);
-        }
+        multiply(matrix, vector);
+    }
 
     public static void multiply(int[][] matrix, int[] vector) {
         if (vector.length != matrix[0].length) {
@@ -50,5 +52,5 @@ public class Task8 {
         }
         return array;
     }
-    }
+}
 

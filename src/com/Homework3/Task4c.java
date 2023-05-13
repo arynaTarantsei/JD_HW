@@ -1,8 +1,6 @@
 package com.Homework3;
 
-import java.util.Scanner;
-
-import static com.Homework3.Task4a_b.readArray;
+import static com.Homework3.Task4aANDb.readArray;
 
 
 public class Task4c {
