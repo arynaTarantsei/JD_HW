@@ -17,7 +17,7 @@ public class Task2 {
         System.out.println("Первый элемент: " + pair1.first());
         System.out.println("Второй элемент: " + pair1.last());
 
-        System.out.println(" ");
+        System.out.println();
         System.out.println("Замена значений элементов второй пары новыми значениями: ");
         pair2.replaceFirst("How are you?");
         pair2.replaceLast(271);
