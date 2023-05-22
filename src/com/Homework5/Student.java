@@ -12,7 +12,7 @@ public class Student {
         this.id = id;
         this.fullName = fullName;
         this.faculty = faculty;
-        this.course = course;
+        this.course = course; //у тебя ни в контструкторе, ни в сеттере не контролируется курс. в задании: В университете учатся студенты с 1 по 5 курс.
         this.group = group;
         this.birthYear = birthYear;
     }

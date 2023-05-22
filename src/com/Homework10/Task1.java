@@ -9,7 +9,7 @@ public class Task1 {
             } else {
                 Integer.parseInt(s);
             }
-        } catch (NullPointerException e) {
+        } catch (NullPointerException e) { //NumberFormatException не обработан. если несколько раз запустить программу. то ошибка летит в JVM
             System.out.println("Выброшено исключение: " + e.getClass());
         }
     }

@@ -4,7 +4,7 @@ public class Task3 {
     public static void main(String[] args) {
         Student[] students = new Student[10];
 
-        students[0] = new Student(1, "Иванов Иван Иванович", "Информатика", 2, 3, 1995);
+        students[0] = new Student(1, "Иванов Иван Иванович", "Информатика", 100, 3, 1995);
         students[1] = new Student(2, "Петров Петр Петрович", "Математика", 1, 1, 1998);
         students[2] = new Student(3, "Сидоров Сидор Сидорович", "Информатика", 4, 2, 1993);
         students[3] = new Student(4, "Кузнецов Андрей Иванович", "Физика", 3, 4, 1996);
