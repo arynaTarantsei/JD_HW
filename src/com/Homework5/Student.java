@@ -12,6 +12,9 @@ public class Student {
         this.id = id;
         this.fullName = fullName;
         this.faculty = faculty;
+        if (course < 1 || course > 5) {
+            throw new IllegalArgumentException("Неправильный номер курса!");
+        }
         this.course = course;
         this.group = group;
         this.birthYear = birthYear;
@@ -51,6 +54,9 @@ public class Student {
     }
 
     public void setCourse(int course) {
+        if (course < 1 || course > 5) {
+            throw new IllegalArgumentException("Неправильный номер курса!");
+        }
         this.course = course;
     }
 
