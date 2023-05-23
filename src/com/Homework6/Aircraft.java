@@ -1,9 +1,9 @@
 package com.Homework6;
 
 public abstract class Aircraft {
-    private int capacity; // вместимость
-    private int liftingCapacity; // грузоподъемность
-    private int range; // дальность полета
+    private int capacity;
+    private int liftingCapacity;
+    private int range;
 
     public Aircraft(int capacity, int liftingCapacity, int range) {
         this.capacity = capacity;
