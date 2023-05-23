@@ -11,6 +11,8 @@ public class Task1 {
             }
         } catch (NullPointerException e) {
             System.out.println("Выброшено исключение: " + e.getClass());
+        } catch (NumberFormatException e) {
+            System.out.println("Выброшено исключение: " + e.getClass());
         }
     }
 }
