@@ -11,7 +11,7 @@ public class Notepad {
 
     public void addNote(String date, String lastName) throws NotepadException {
         if (notes.containsKey(date)) {
-            throw new NotepadException("A note for this date already exists.");
+            throw new NotepadException("Запись на эту дату уже существует.");
         }
         Note note = new Note(lastName);
         notes.put(date, note);
