@@ -16,7 +16,7 @@ public class Task2 {
 
         System.out.println(notepad.getNote("01-08-2021").getLastName());
 
-        List<Notepad.Note> noteList = notepad.getAllNotes();
+        List<Notepad.Note> noteList = notepad.getAllNotes(); //при запуске генерируется Exception in thread "main" java.time.format.DateTimeParseException: Text 'Иванов' could not be parsed at index 0
         for (Notepad.Note note : noteList) {
             System.out.println(note.toString());
         }
