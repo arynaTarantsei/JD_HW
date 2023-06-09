@@ -19,7 +19,7 @@ public class Task1 {
             Document clonedDocument = document1.clone();
 
             System.out.println("Сравнение с использованием '==' между оригинальным и клонированным документами: " + (document1 == clonedDocument));
-            System.out.println("Сравнение с использованием 'equals' между оригинальным и клонированным документами: " + document1.equals(clonedDocument));
+            System.out.println("Сравнение с использованием 'equals' между оригинальным и клонированным документами: " + document1.equals(clonedDocument)); //false, а должно быть true. это из-за того что не переопределены методы
             System.out.println("Сравнение с использованием 'equals' между клонированным документом и другим документом того же класса: " + clonedDocument.equals(new Document("New Document", 0)));
 
             Object objectRef = clonedDocument;

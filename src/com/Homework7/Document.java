@@ -32,8 +32,12 @@ class Document implements Printable, Cloneable, Comparable<Document> {
         return Integer.compare(this.pageCount, other.pageCount);
     }
 
-    public void setOutdated(boolean b) {
+    public void setOutdated(boolean b) { //метод пустой и ничего не делает
     }
+
+    /*
+    в классе нет equals, hashCode, toString
+     */
 }
 
 
