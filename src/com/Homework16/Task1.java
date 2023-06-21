@@ -22,6 +22,6 @@ public class Task1 {
             }
         }
 
-        System.out.println("Counter value: " + counter.getCount());
+        System.out.println("Значение счётчика: " + counter.getCount());
     }
 }
