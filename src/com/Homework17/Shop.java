@@ -74,6 +74,7 @@ class Shop {
         }
 
         public void printReceipt() {
+            //доступ в консоль неплохо бы синхронизировать. потоки могут прерывать чеки друг друга. можно использовать Lock
             System.out.println("------------------------------------");
             System.out.println("Продавец " + Thread.currentThread().getName() + " обслуживает покупателя " + name + ":");
             System.out.println(receipt.toString());
