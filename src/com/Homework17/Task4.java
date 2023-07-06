@@ -17,6 +17,6 @@ public class Task4 {
             shop.enqueueCustomer(customer);
         }
 
-        shop.close();
+        shop.close(); //программа не завершается самостоятельно после обслуживания всех покупателей
     }
 }
