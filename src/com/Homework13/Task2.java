@@ -5,20 +5,26 @@ public class Task2 {
         Notepad notepad = new Notepad();
 
         try {
-            notepad.addNote("05-07-2021", "Иванов");
-            notepad.addNote("01-08-2021", "Петров");
-            notepad.addNote("10-06-2021", "Сидоров");
-            notepad.addNote("19-05-2021", "Смирнов");
-            notepad.addNote("05-07-2021", "Кузнецов");
-        } catch (NotepadException ex) {
-            System.out.println(ex.getMessage());
+            notepad.addNote("01-06-2023", "Смит");
+            notepad.addNote("03-06-2023", "Джон");
+            notepad.addNote("02-06-2023", "Браун");
+            notepad.addNote("01-06-2023", "Уилсон");
+        } catch (DuplicateNoteException e) {
+            System.out.println("Ошибка: " + e.getMessage());
         }
 
-        System.out.println(notepad.getNote("01-08-2021").getLastName());
+        System.out.println("Записи в порядке дат:");
+        List<Notepad.Note> allNotes = notepad.getAllNotes();
+        for (Notepad.Note note : allNotes) {
+            System.out.println(note.getLastName());
+        }
 
-        List<Notepad.Note> noteList = notepad.getAllNotes();
-        for (Notepad.Note note : noteList) {
-            System.out.println(note.toString());
+        String dateToGet = "03-06-2023";
+        Notepad.Note note = notepad.getNote(dateToGet);
+        if (note != null) {
+            System.out.println("Запись на " + dateToGet + ": " + note.getLastName());
+        } else {
+            System.out.println("Запись на " + dateToGet + " не найдена");
         }
     }
 }

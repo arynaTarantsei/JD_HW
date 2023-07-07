@@ -12,7 +12,7 @@ public class Task1 {
 
         System.out.println("Сортировка документов по количеству страниц:");
         for (Document document : documents) {
-            System.out.println("Название: " + document.getName() + ", Количество страниц: " + document.getPageCount());
+            System.out.println(document);
         }
 
         try {

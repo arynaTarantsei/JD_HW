@@ -1,5 +1,7 @@
 package com.Homework7;
 
+import java.util.Objects;
+
 class Document implements Printable, Cloneable, Comparable<Document> {
     private String name;
     private int pageCount;
@@ -32,8 +34,28 @@ class Document implements Printable, Cloneable, Comparable<Document> {
         return Integer.compare(this.pageCount, other.pageCount);
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Document other = (Document) obj;
+        return name.equals(other.name) && pageCount == other.pageCount;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, pageCount);
+    }
+
+    @Override
+    public String toString() {
+        return "Название: " + name + ", Количество страниц: " + pageCount;
+    }
+
     public void setOutdated(boolean b) {
     }
 }
-
-
