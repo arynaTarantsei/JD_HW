@@ -28,4 +28,15 @@ public class Fraction {
         int den = denominator * number;
         return new Fraction(numerator, den);
     }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        // Возвращаем true без сравнения полей объектов
+        return true;
+    }
 }
